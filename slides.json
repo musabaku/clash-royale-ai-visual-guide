@@ -1,0 +1,376 @@
+[
+  {
+    "id": 1,
+    "title": "A game can run without graphics",
+    "subtitle": "The rules calculator works even when nothing is drawn.",
+    "sourceSections": [
+      1
+    ],
+    "image": "assets/01.png"
+  },
+  {
+    "id": 2,
+    "title": "The five pieces of the system",
+    "subtitle": "Each component has one main job.",
+    "sourceSections": [
+      2
+    ],
+    "image": "assets/02.png"
+  },
+  {
+    "id": 3,
+    "title": "Game engine, client, server, headless",
+    "subtitle": "Running the rules does not require a visible window.",
+    "sourceSections": [
+      3
+    ],
+    "image": "assets/03.png"
+  },
+  {
+    "id": 4,
+    "title": "Inside crforge and the Python bridge",
+    "subtitle": "Java calculates the battle; Python can supply the decisions.",
+    "sourceSections": [
+      4
+    ],
+    "image": "assets/04.png"
+  },
+  {
+    "id": 5,
+    "title": "Game state versus player observation",
+    "subtitle": "The simulator may know more than a fair player can see.",
+    "sourceSections": [
+      5,
+      15,
+      25
+    ],
+    "image": "assets/05.png"
+  },
+  {
+    "id": 6,
+    "title": "Ticks, delay, and determinism",
+    "subtitle": "Game time advances in small discrete steps.",
+    "sourceSections": [
+      5,
+      10
+    ],
+    "image": "assets/06.png"
+  },
+  {
+    "id": 7,
+    "title": "How state becomes a picture",
+    "subtitle": "A renderer turns facts into visible objects.",
+    "sourceSections": [
+      6
+    ],
+    "image": "assets/07.png"
+  },
+  {
+    "id": 8,
+    "title": "Assets, textures, sprites, and animation",
+    "subtitle": "Pictures are ingredients; presentation also needs instructions.",
+    "sourceSections": [
+      7
+    ],
+    "image": "assets/08.png"
+  },
+  {
+    "id": 9,
+    "title": "CPU and GPU: different jobs",
+    "subtitle": "Choose the processor for the work it actually accelerates.",
+    "sourceSections": [
+      8,
+      20,
+      28
+    ],
+    "image": "assets/09.png"
+  },
+  {
+    "id": 10,
+    "title": "WebGL: the browser draws with the GPU",
+    "subtitle": "Geometry, textures, and shaders become pixels on a canvas.",
+    "sourceSections": [
+      8
+    ],
+    "image": "assets/10.png"
+  },
+  {
+    "id": 11,
+    "title": "Three ways to stream a game",
+    "subtitle": "What crosses the network determines what the browser must do.",
+    "sourceSections": [
+      9
+    ],
+    "image": "assets/11.png"
+  },
+  {
+    "id": 12,
+    "title": "The native graphics-command pipeline",
+    "subtitle": "Counterpush is a reference for delivery, not a supplied native producer.",
+    "sourceSections": [
+      9,
+      10,
+      30,
+      36
+    ],
+    "image": "assets/12.png"
+  },
+  {
+    "id": 13,
+    "title": "The browser software toolbox",
+    "subtitle": "Which program does which job?",
+    "sourceSections": [
+      10
+    ],
+    "image": "assets/13.png"
+  },
+  {
+    "id": 14,
+    "title": "Packets, compression, cache, and ASTC",
+    "subtitle": "Two kinds of compression solve different problems.",
+    "sourceSections": [
+      10
+    ],
+    "image": "assets/14.png"
+  },
+  {
+    "id": 15,
+    "title": "Timing, recovery, and audio vocabulary",
+    "subtitle": "Five clocks can coexist in one battle.",
+    "sourceSections": [
+      10
+    ],
+    "image": "assets/15.png"
+  },
+  {
+    "id": 16,
+    "title": "Four records of the same battle",
+    "subtitle": "A replay is not automatically a video or complete state.",
+    "sourceSections": [
+      11
+    ],
+    "image": "assets/16.png"
+  },
+  {
+    "id": 17,
+    "title": "Reading a match from video",
+    "subtitle": "Detection, OCR, and tracking turn pixels into uncertain estimates.",
+    "sourceSections": [
+      11
+    ],
+    "image": "assets/17.png"
+  },
+  {
+    "id": 18,
+    "title": "Reconstruction and divergence",
+    "subtitle": "Replay actions inside the simulator, then check the result.",
+    "sourceSections": [
+      12,
+      32
+    ],
+    "image": "assets/18.png"
+  },
+  {
+    "id": 19,
+    "title": "Neural networks: predictions from numbers",
+    "subtitle": "Inference uses weights. Training changes weights.",
+    "sourceSections": [
+      13
+    ],
+    "image": "assets/19.png"
+  },
+  {
+    "id": 20,
+    "title": "A Transformer reads relationships",
+    "subtitle": "Attention combines information across battlefield entities.",
+    "sourceSections": [
+      14
+    ],
+    "image": "assets/20.png"
+  },
+  {
+    "id": 21,
+    "title": "Policy, value, and legal actions",
+    "subtitle": "Choosing a card also means choosing a place and time.",
+    "sourceSections": [
+      15
+    ],
+    "image": "assets/21.png"
+  },
+  {
+    "id": 22,
+    "title": "The reinforcement-learning loop",
+    "subtitle": "The AI learns by interacting with an environment.",
+    "sourceSections": [
+      16
+    ],
+    "image": "assets/22.png"
+  },
+  {
+    "id": 23,
+    "title": "Rewards and reward hacking",
+    "subtitle": "A useful score can become the wrong target.",
+    "sourceSections": [
+      17
+    ],
+    "image": "assets/23.png"
+  },
+  {
+    "id": 24,
+    "title": "PPO and actor–critic learning",
+    "subtitle": "Improve the policy without encouraging uncontrolled jumps.",
+    "sourceSections": [
+      18
+    ],
+    "image": "assets/24.png"
+  },
+  {
+    "id": 25,
+    "title": "Checkpoints, self-play, and holdouts",
+    "subtitle": "A saved model is one part of a trustworthy training campaign.",
+    "sourceSections": [
+      18,
+      19
+    ],
+    "image": "assets/25.png"
+  },
+  {
+    "id": 26,
+    "title": "Batched inference and throughput",
+    "subtitle": "Keep simulation workers and the GPU usefully fed.",
+    "sourceSections": [
+      20
+    ],
+    "image": "assets/26.png"
+  },
+  {
+    "id": 27,
+    "title": "Imitation learning and behavior cloning",
+    "subtitle": "Learn from demonstrations before learning from consequences.",
+    "sourceSections": [
+      21
+    ],
+    "image": "assets/27.png"
+  },
+  {
+    "id": 28,
+    "title": "AI player versus AI coach",
+    "subtitle": "A coach can spend more time exploring alternatives.",
+    "sourceSections": [
+      22,
+      23
+    ],
+    "image": "assets/28.png"
+  },
+  {
+    "id": 29,
+    "title": "Worked Cannon example: rebuild and branch",
+    "subtitle": "A hypothetical coaching investigation, not analysis of your match.",
+    "sourceSections": [
+      24
+    ],
+    "image": "assets/29.png"
+  },
+  {
+    "id": 30,
+    "title": "Worked Cannon example: compare and explain",
+    "subtitle": "A hypothetical model result must carry its uncertainty.",
+    "sourceSections": [
+      24
+    ],
+    "image": "assets/30.png"
+  },
+  {
+    "id": 31,
+    "title": "Hidden information and hindsight",
+    "subtitle": "Judge the choice using what was knowable at that time.",
+    "sourceSections": [
+      25
+    ],
+    "image": "assets/31.png"
+  },
+  {
+    "id": 32,
+    "title": "Confidence, calibration, and abstaining",
+    "subtitle": "Ask what a probability actually refers to.",
+    "sourceSections": [
+      26
+    ],
+    "image": "assets/32.png"
+  },
+  {
+    "id": 33,
+    "title": "How to measure a strong player and coach",
+    "subtitle": "Playing strength and reliable criticism need separate tests.",
+    "sourceSections": [
+      27
+    ],
+    "image": "assets/33.png"
+  },
+  {
+    "id": 34,
+    "title": "RTX 5090, tensors, and training memory",
+    "subtitle": "More compute helps only after the pipeline is trustworthy.",
+    "sourceSections": [
+      28
+    ],
+    "image": "assets/34.png"
+  },
+  {
+    "id": 35,
+    "title": "Two connected applications",
+    "subtitle": "One develops the AI; the other analyzes real matches.",
+    "sourceSections": [
+      29
+    ],
+    "image": "assets/35.png"
+  },
+  {
+    "id": 36,
+    "title": "What the proposed coach would show",
+    "subtitle": "An interactive timeline tied to evidence and alternatives.",
+    "sourceSections": [
+      30
+    ],
+    "image": "assets/36.png"
+  },
+  {
+    "id": 37,
+    "title": "Project status: what exists and what is pending",
+    "subtitle": "Read readiness as separate evidence layers.",
+    "sourceSections": [
+      31
+    ],
+    "image": "assets/37.png"
+  },
+  {
+    "id": 38,
+    "title": "The sim-to-real gap and a sensible first build",
+    "subtitle": "A powerful model can become excellent at the wrong game.",
+    "sourceSections": [
+      32,
+      33
+    ],
+    "image": "assets/38.png"
+  },
+  {
+    "id": 39,
+    "title": "Build the first trustworthy coaching result",
+    "subtitle": "The first six acceptance gates in the guide's proposed sequence.",
+    "sourceSections": [
+      34
+    ],
+    "image": "assets/39.png"
+  },
+  {
+    "id": 40,
+    "title": "From first evidence to the complete system",
+    "subtitle": "Two end goals, distinct milestones, one connected architecture.",
+    "sourceSections": [
+      34,
+      35,
+      36
+    ],
+    "image": "assets/40.png"
+  }
+]
