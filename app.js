@@ -14,7 +14,7 @@ const CHAPTERS = [
 const $ = (id) => document.getElementById(id);
 let slides = [];
 let current = 0;
-let detailed = false;
+let detailed = true;
 let started = false;
 let imageVersion = 0;
 let touchStart = null;
@@ -129,7 +129,7 @@ function showSlide(index, options = {}) {
   });
   document.querySelectorAll(".chapter").forEach((node) => node.classList.toggle("current", Number(node.dataset.chapter) === CHAPTERS.indexOf(chapter)));
   document.querySelectorAll(".overview-card").forEach((node) => node.classList.toggle("current", Number(node.dataset.slide) === slide.id));
-  setDetailed(false);
+  setDetailed(true);
   loadImage(slide);
   sessionSet(POSITION_KEY, String(slide.id));
   const hash = "#slide-" + padded(slide.id);
