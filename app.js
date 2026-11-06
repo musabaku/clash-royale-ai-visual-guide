@@ -30,6 +30,15 @@ function chapterFor(id) { return CHAPTERS.find((chapter) => id >= chapter.start 
 function padded(id) { return String(id).padStart(2, "0"); }
 function hashId() { const match = window.location.hash.match(/^#slide-(\d+)$/); return match ? Number(match[1]) : null; }
 function text(tag, className, value) { const node = document.createElement(tag); if (className) node.className = className; node.textContent = value; return node; }
+function appendTopicTags(parent, slide) {
+  (slide.tags || []).forEach((label) => {
+    const badge = text("span", "topic-tag", "");
+    const star = text("span", "topic-star", "★");
+    star.setAttribute("aria-hidden", "true");
+    badge.append(star, document.createTextNode(label));
+    parent.append(badge);
+  });
+}
 
 async function openGuide() {
   $("entry-screen").hidden = true;
@@ -75,7 +84,10 @@ function buildChapters() {
       const button = text("button", "rail-lesson", "");
       button.type = "button";
       button.dataset.slide = String(slide.id);
-      button.append(text("span", "rail-id", padded(slide.id)), text("span", "", slide.title));
+      const copy = text("span", "rail-lesson-copy", "");
+      copy.append(text("span", "rail-title", slide.title));
+      appendTopicTags(copy, slide);
+      button.append(text("span", "rail-id", padded(slide.id)), copy);
       button.addEventListener("click", () => showSlide(slides.findIndex((item) => item.id === slide.id)));
       li.append(button); list.append(li);
     });
@@ -86,13 +98,13 @@ function buildChapters() {
 
 function buildOverview(query = "") {
   const terms = query.trim().toLowerCase();
-  const filtered = slides.filter((slide) => [slide.title, slide.subtitle || "", chapterFor(slide.id).title].join(" ").toLowerCase().includes(terms));
+  const filtered = slides.filter((slide) => [slide.title, slide.subtitle || "", chapterFor(slide.id).title, ...(slide.tags || [])].join(" ").toLowerCase().includes(terms));
   const fragment = document.createDocumentFragment();
   filtered.forEach((slide) => {
     const card = text("button", "overview-card", "");
     card.type = "button";
     card.dataset.slide = String(slide.id);
-    card.setAttribute("aria-label", "Open lesson " + slide.id + ": " + slide.title);
+    card.setAttribute("aria-label", "Open lesson " + slide.id + ": " + slide.title + ((slide.tags || []).length ? ". " + slide.tags.join(", ") : ""));
     if (slides[current] && slides[current].id === slide.id) card.classList.add("current");
     const thumb = text("div", "thumb-wrap", "");
     const img = document.createElement("img");
@@ -100,6 +112,7 @@ function buildOverview(query = "") {
     thumb.append(img);
     const body = text("div", "card-content", "");
     body.append(text("span", "card-chapter", chapterFor(slide.id).short), text("span", "card-title", slide.title));
+    appendTopicTags(body, slide);
     card.append(thumb, text("span", "card-number", padded(slide.id)), body);
     card.addEventListener("click", () => { $("overview").close(); showSlide(slides.findIndex((item) => item.id === slide.id)); });
     fragment.append(card);
@@ -116,6 +129,9 @@ function showSlide(index, options = {}) {
   const chapter = chapterFor(slide.id);
   $("lesson-title").textContent = slide.title;
   $("lesson-subtitle").textContent = slide.subtitle || "";
+  $("lesson-tags").replaceChildren();
+  appendTopicTags($("lesson-tags"), slide);
+  $("lesson-tags").hidden = !$("lesson-tags").childElementCount;
   $("chapter-label").textContent = "Chapter " + (CHAPTERS.indexOf(chapter) + 1) + " / " + chapter.short;
   $("current-number").textContent = padded(slide.id);
   $("source-caption").textContent = slide.sourceDocument

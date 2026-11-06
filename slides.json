@@ -15,7 +15,7 @@
     "sourceSections": [
       2
     ],
-    "image": "assets/02-deep-learning.png"
+    "image": "assets/02.png"
   },
   {
     "id": 3,
@@ -177,7 +177,10 @@
     "sourceSections": [
       13
     ],
-    "image": "assets/19.png"
+    "image": "assets/19.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 20,
@@ -186,7 +189,10 @@
     "sourceSections": [
       14
     ],
-    "image": "assets/20.png"
+    "image": "assets/20.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 21,
@@ -195,7 +201,10 @@
     "sourceSections": [
       15
     ],
-    "image": "assets/21.png"
+    "image": "assets/21.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 22,
@@ -204,7 +213,10 @@
     "sourceSections": [
       16
     ],
-    "image": "assets/22.png"
+    "image": "assets/22.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 23,
@@ -213,7 +225,10 @@
     "sourceSections": [
       17
     ],
-    "image": "assets/23.png"
+    "image": "assets/23.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 24,
@@ -222,7 +237,10 @@
     "sourceSections": [
       18
     ],
-    "image": "assets/24.png"
+    "image": "assets/24.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 25,
@@ -232,7 +250,10 @@
       18,
       19
     ],
-    "image": "assets/25.png"
+    "image": "assets/25.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 26,
@@ -241,7 +262,10 @@
     "sourceSections": [
       20
     ],
-    "image": "assets/26.png"
+    "image": "assets/26.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 27,
@@ -250,7 +274,10 @@
     "sourceSections": [
       21
     ],
-    "image": "assets/27.png"
+    "image": "assets/27.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 28,
@@ -314,7 +341,10 @@
     "sourceSections": [
       28
     ],
-    "image": "assets/34.png"
+    "image": "assets/34.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 35,
@@ -351,7 +381,10 @@
       32,
       33
     ],
-    "image": "assets/38.png"
+    "image": "assets/38.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 39,
@@ -381,7 +414,10 @@
       "A overview; A6; D4; E architecture"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/41.png"
+    "image": "assets/41.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 42,
@@ -391,7 +427,10 @@
       "A1; D5"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/42.png"
+    "image": "assets/42.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 43,
@@ -431,7 +470,10 @@
       "A5; E executive"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/46.png"
+    "image": "assets/46.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 47,
@@ -441,7 +483,10 @@
       "C change1; D3 idea4; E memory"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/47.png"
+    "image": "assets/47.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 48,
@@ -451,7 +496,10 @@
       "C changes2–4; D3 idea2; A8"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/48.png"
+    "image": "assets/48.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 49,
@@ -471,7 +519,10 @@
       "A2; D6; E correction3"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/50.png"
+    "image": "assets/50.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 51,
@@ -491,7 +542,10 @@
       "E missing discovery3; E correction2; Cochon action-clock"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/52.png"
+    "image": "assets/52.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 53,
@@ -561,7 +615,10 @@
       "B VPT; D papers"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/59.png"
+    "image": "assets/59.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 60,
@@ -581,7 +638,10 @@
       "B idea6; B research map"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/61.png"
+    "image": "assets/61.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 62,
@@ -631,7 +691,10 @@
       "B idea7; C objection; B GPU caution"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/66.png"
+    "image": "assets/66.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 67,
@@ -641,7 +704,10 @@
       "B six papers; D ReVisionLLM"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/67.png"
+    "image": "assets/67.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 68,
@@ -651,7 +717,10 @@
       "D papers; B BayesSim/Genie; E diversity"
     ],
     "sourceDocument": "Strong AI assessment · 6 November 2026",
-    "image": "assets/68.png"
+    "image": "assets/68.png",
+    "tags": [
+      "Deep learning"
+    ]
   },
   {
     "id": 69,
