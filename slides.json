@@ -372,5 +372,385 @@
       36
     ],
     "image": "assets/40.png"
+  },
+  {
+    "id": 41,
+    "title": "How the stronger system fits together",
+    "subtitle": "Policy, search, memory, and self-play solve different problems.",
+    "sourceSections": [
+      "A overview; A6; D4; E architecture"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/41.png"
+  },
+  {
+    "id": 42,
+    "title": "What the search experiment actually showed",
+    "subtitle": "A specific reported benchmark, not a general player ranking.",
+    "sourceSections": [
+      "A1; D5"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/42.png"
+  },
+  {
+    "id": 43,
+    "title": "Inside a four-second tactical lookahead",
+    "subtitle": "Copy, branch, simulate, score, choose.",
+    "sourceSections": [
+      "A3; A7"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/43.png"
+  },
+  {
+    "id": 44,
+    "title": "A tactical candidate laboratory",
+    "subtitle": "Search meaningful cards, places, and times.",
+    "sourceSections": [
+      "A7; A final; D8C"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/44.png"
+  },
+  {
+    "id": 45,
+    "title": "Why searching more can still choose badly",
+    "subtitle": "A search algorithm optimizes the evaluator it is given.",
+    "sourceSections": [
+      "A4"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/45.png"
+  },
+  {
+    "id": 46,
+    "title": "Three ways training can look successful and fail",
+    "subtitle": "Reward hacking, narrow opponents, and inferior habits.",
+    "sourceSections": [
+      "A5; E executive"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/46.png"
+  },
+  {
+    "id": 47,
+    "title": "Memory without cheating",
+    "subtitle": "Remember public history; estimate what remains hidden.",
+    "sourceSections": [
+      "C change1; D3 idea4; E memory"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/47.png"
+  },
+  {
+    "id": 48,
+    "title": "A league that finds and fixes weaknesses",
+    "subtitle": "Use diverse opponents, not one mirror match.",
+    "sourceSections": [
+      "C changes2–4; D3 idea2; A8"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/48.png"
+  },
+  {
+    "id": 49,
+    "title": "Millions of actions are not complete battlefield states",
+    "subtitle": "Qualify what the structured replay dataset actually contains.",
+    "sourceSections": [
+      "D1; E correction2"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/49.png"
+  },
+  {
+    "id": 50,
+    "title": "A portfolio of data, not one magic dataset",
+    "subtitle": "Use each source for the task its labels support.",
+    "sourceSections": [
+      "A2; D6; E correction3"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/50.png"
+  },
+  {
+    "id": 51,
+    "title": "Which moment does the replay tick mean?",
+    "subtitle": "Issuance, acceptance, execution, and appearance are different events.",
+    "sourceSections": [
+      "B timing; D replay correction; E correction1"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/51.png"
+  },
+  {
+    "id": 52,
+    "title": "Learn when, what, and where",
+    "subtitle": "Sparse decisions need more than a wall of WAIT labels.",
+    "sourceSections": [
+      "E missing discovery3; E correction2; Cochon action-clock"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/52.png"
+  },
+  {
+    "id": 53,
+    "title": "Search before a fast snapshot API exists",
+    "subtitle": "Reconstruct a known prefix, then branch correctly.",
+    "sourceSections": [
+      "E correction4; A3"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/53.png"
+  },
+  {
+    "id": 54,
+    "title": "An experiment that can choose the better approach",
+    "subtitle": "Compare methods under the same conditions.",
+    "sourceSections": [
+      "A7 baselines; D5; E discovery7"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/54.png"
+  },
+  {
+    "id": 55,
+    "title": "Recorded playback is a real but bounded milestone",
+    "subtitle": "Drawing a saved stream does not generate a new battle.",
+    "sourceSections": [
+      "D graphics checkpoint; E executive"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/55.png"
+  },
+  {
+    "id": 56,
+    "title": "What the first coaching timeline can honestly say",
+    "subtitle": "A measured resource pattern is not automatically a mistake.",
+    "sourceSections": [
+      "D Coach V0"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/56.png"
+  },
+  {
+    "id": 57,
+    "title": "What video understanding can and cannot promise",
+    "subtitle": "Replace an all-or-nothing argument with four levels.",
+    "sourceSections": [
+      "B levels A–D; earlier Haiku discussion"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/57.png"
+  },
+  {
+    "id": 58,
+    "title": "An event-focused contact-sheet workflow",
+    "subtitle": "Overview first; zoom into the few moments that matter.",
+    "sourceSections": [
+      "B ideas1 and workflow; D ExperimentA"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/58.png"
+  },
+  {
+    "id": 59,
+    "title": "Inverse dynamics: infer an action from change",
+    "subtitle": "Before and after frames can reveal what happened between them.",
+    "sourceSections": [
+      "B VPT; D papers"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/59.png"
+  },
+  {
+    "id": 60,
+    "title": "Computer vision supplies measurements",
+    "subtitle": "Geometry and OCR still need calibration and error bars.",
+    "sourceSections": [
+      "Earlier Haiku split; B precision"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/60.png"
+  },
+  {
+    "id": 61,
+    "title": "Track a unit instead of rediscovering it",
+    "subtitle": "Segmentation and tracking preserve visual identity over time.",
+    "sourceSections": [
+      "B idea6; B research map"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/61.png"
+  },
+  {
+    "id": 62,
+    "title": "Can graphics commands become weak labels?",
+    "subtitle": "Test one recognizable trajectory before building a general system.",
+    "sourceSections": [
+      "B idea3; C objection; D idea8"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/62.png"
+  },
+  {
+    "id": 63,
+    "title": "Let the simulator challenge visual guesses",
+    "subtitle": "Inverse inference fits plausible actions to observed outcomes.",
+    "sourceSections": [
+      "B ideas4/8; D idea5"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/63.png"
+  },
+  {
+    "id": 64,
+    "title": "JSON that preserves what we do not know",
+    "subtitle": "A useful event record keeps alternatives and provenance.",
+    "sourceSections": [
+      "B JSON schema; B idea5"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/64.png"
+  },
+  {
+    "id": 65,
+    "title": "Keep multiple histories and ask focused questions",
+    "subtitle": "Use uncertainty to spend human effort where it helps.",
+    "sourceSections": [
+      "B ideas8/9"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/65.png"
+  },
+  {
+    "id": 66,
+    "title": "Synthetic labels and real-world transfer",
+    "subtitle": "Perfect simulator labels do not guarantee real-video accuracy.",
+    "sourceSections": [
+      "B idea7; C objection; B GPU caution"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/66.png"
+  },
+  {
+    "id": 67,
+    "title": "Research map: learning to see events",
+    "subtitle": "Borrow an idea, then validate it in this game.",
+    "sourceSections": [
+      "B six papers; D ReVisionLLM"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/67.png"
+  },
+  {
+    "id": 68,
+    "title": "Research map: learning, beliefs, and planning",
+    "subtitle": "Each research family addresses a different bottleneck.",
+    "sourceSections": [
+      "D papers; B BayesSim/Genie; E diversity"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/68.png"
+  },
+  {
+    "id": 69,
+    "title": "How to estimate vision cost honestly",
+    "subtitle": "An inexpensive API call can still make expensive errors.",
+    "sourceSections": [
+      "B cost finding; earlier cost debate"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/69.png"
+  },
+  {
+    "id": 70,
+    "title": "Experiment A: video-to-event agreement",
+    "subtitle": "Compare Haiku, classical CV, and a hybrid using known labels.",
+    "sourceSections": [
+      "B first experiment; D8A"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/70.png"
+  },
+  {
+    "id": 71,
+    "title": "Experiment B: can real inputs rebuild a battle?",
+    "subtitle": "Extracting action markers is only the first gate.",
+    "sourceSections": [
+      "D replay correction; D8B; E action/data gates"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/71.png"
+  },
+  {
+    "id": 72,
+    "title": "Experiment C: does lookahead make this agent stronger?",
+    "subtitle": "Measure the tactical gain before a large training campaign.",
+    "sourceSections": [
+      "D8C; A7; E next steps"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/72.png"
+  },
+  {
+    "id": 73,
+    "title": "Spend more search where it earns its cost",
+    "subtitle": "Adaptive computation and multi-fidelity evaluation.",
+    "sourceSections": [
+      "D ideas3/6; D GPU priorities"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/73.png"
+  },
+  {
+    "id": 74,
+    "title": "A coach that challenges its own advice",
+    "subtitle": "Try to invalidate a recommendation before presenting it.",
+    "sourceSections": [
+      "D idea7; D final feedback loop"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/74.png"
+  },
+  {
+    "id": 75,
+    "title": "Cochon as a reuse candidate",
+    "subtitle": "Dynamic presentation and action prediction are distinct interfaces.",
+    "sourceSections": [
+      "E Cochon discoveries; C/native caveats"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/75.png"
+  },
+  {
+    "id": 76,
+    "title": "A stronger research roadmap with explicit gates",
+    "subtitle": "The next step should resolve a question, not just consume compute.",
+    "sourceSections": [
+      "A7; E six next steps and postponements"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/76.png"
+  },
+  {
+    "id": 77,
+    "title": "The replay-to-state compiler",
+    "subtitle": "One evidence contract can serve training, play, and coaching.",
+    "sourceSections": [
+      "B compiler; D4; E architecture"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/77.png"
+  },
+  {
+    "id": 78,
+    "title": "Close the loop from observation to better practice",
+    "subtitle": "A unified system can learn which weakness to train next.",
+    "sourceSections": [
+      "D final; E final synthesis"
+    ],
+    "sourceDocument": "Strong AI assessment · 6 November 2026",
+    "image": "assets/78.png"
   }
 ]

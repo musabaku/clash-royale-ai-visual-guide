@@ -9,7 +9,12 @@ const CHAPTERS = [
   { title: "Streaming & replay", short: "Graphics & replay", start: 11, end: 18 },
   { title: "How the AI learns", short: "AI learning", start: 19, end: 27 },
   { title: "The evidence-based coach", short: "Coaching", start: 28, end: 33 },
-  { title: "Hardware to milestones", short: "Build the system", start: 34, end: 40 }
+  { title: "Hardware to milestones", short: "Build the system", start: 34, end: 40 },
+  { title: "Stronger decisions", short: "Stronger decisions", start: 41, end: 48 },
+  { title: "Data & evidence", short: "Data & evidence", start: 49, end: 56 },
+  { title: "From video to state", short: "Video to state", start: 57, end: 66 },
+  { title: "Research & experiments", short: "Research & experiments", start: 67, end: 72 },
+  { title: "Research to product", short: "Research to product", start: 73, end: 78 }
 ];
 const $ = (id) => document.getElementById(id);
 let slides = [];
@@ -113,7 +118,9 @@ function showSlide(index, options = {}) {
   $("lesson-subtitle").textContent = slide.subtitle || "";
   $("chapter-label").textContent = "Chapter " + (CHAPTERS.indexOf(chapter) + 1) + " / " + chapter.short;
   $("current-number").textContent = padded(slide.id);
-  $("source-caption").textContent = "Based on guide section" + ((slide.sourceSections || []).length === 1 ? " " : "s ") + (slide.sourceSections || []).join(", ") + ". Educational illustration; examples are not measured match findings.";
+  $("source-caption").textContent = slide.sourceDocument
+    ? slide.sourceDocument + ((slide.sourceSections || []).length ? " · " + slide.sourceSections.join(", ") : "") + ". Reported findings are not a fresh project audit; examples remain illustrative."
+    : "Based on guide section" + ((slide.sourceSections || []).length === 1 ? " " : "s ") + (slide.sourceSections || []).join(", ") + ". Educational illustration; examples are not measured match findings.";
   $("original-link").href = slide.image;
   $("original-link").setAttribute("aria-label", "Open full-resolution infographic: " + slide.title);
   $("retry-image-link").href = slide.image;
