@@ -23,6 +23,16 @@ let detailed = true;
 let started = false;
 let imageVersion = 0;
 let touchStart = null;
+let activeImageUrl = null;
+const imageCache = new GuideImageCache({ onProgress: ({ ready, failed, total, pending }) => {
+  if (!total) return;
+  $("download-progress").max = total;
+  $("download-progress").value = ready;
+  $("download-status").textContent = ready === total
+    ? "All " + total + " infographics loaded"
+    : "Loading all infographics · " + ready + " / " + total + " ready" + (failed ? " · " + failed + " to retry" : "");
+  $("retry-downloads").hidden = !failed || Boolean(pending);
+} });
 
 function sessionGet(key) { try { return sessionStorage.getItem(key); } catch (_) { return null; } }
 function sessionSet(key, value) { try { sessionStorage.setItem(key, value); } catch (_) {} }
@@ -62,6 +72,7 @@ async function openGuide() {
     const requested = hashId() || Number(sessionGet(POSITION_KEY)) || slides[0].id;
     const requestedIndex = slides.findIndex((slide) => slide.id === requested);
     showSlide(requestedIndex >= 0 ? requestedIndex : 0, { initial: true });
+    imageCache.all(slides.map((slide) => slide.image));
   } catch (error) {
     started = false;
     $("load-error").hidden = false;
@@ -161,22 +172,35 @@ function showSlide(index, options = {}) {
   $("announcement").textContent = "Lesson " + (current + 1) + " of " + slides.length + ". " + slide.title;
   if (!options.initial) $("lesson-title").focus({ preventScroll: true });
   if (!options.initial) window.scrollTo({ top: 0, behavior: "auto" });
-  const next = slides[current + 1];
-  if (next) { const preload = new Image(); preload.src = next.image; }
 }
 
-function loadImage(slide) {
+async function loadImage(slide) {
   const version = ++imageVersion;
   const img = $("lesson-image");
   $("image-status").hidden = false;
   $("image-error").hidden = true;
+  $("stage").classList.add("image-pending");
   img.hidden = false;
   img.classList.add("loading");
+  img.onload = null;
+  img.onerror = null;
   img.alt = "Lesson " + padded(slide.id) + ": " + slide.title + ". " + (slide.subtitle || "") + " Open at full size to read the infographic.";
   img.setAttribute("aria-label", "Lesson " + padded(slide.id) + ": " + slide.title + ". Activate to toggle detailed reading size.");
-  img.onload = () => { if (version !== imageVersion) return; $("image-status").hidden = true; img.classList.remove("loading"); };
-  img.onerror = () => { if (version !== imageVersion) return; $("image-status").hidden = true; img.hidden = true; $("image-error").hidden = false; };
-  img.src = slide.image;
+  try {
+    const source = await imageCache.source(slide.image);
+    if (version !== imageVersion) { if (source.startsWith("blob:")) URL.revokeObjectURL(source); return; }
+    if (activeImageUrl) URL.revokeObjectURL(activeImageUrl);
+    activeImageUrl = source.startsWith("blob:") ? source : null;
+    img.onload = () => { if (version !== imageVersion) return; $("image-status").hidden = true; $("stage").classList.remove("image-pending"); img.classList.remove("loading"); };
+    img.onerror = () => { if (version !== imageVersion) return; $("image-status").hidden = true; $("stage").classList.remove("image-pending"); img.hidden = true; $("image-error").hidden = false; };
+    img.src = source;
+  } catch (_) {
+    if (version !== imageVersion) return;
+    $("image-status").hidden = true;
+    $("stage").classList.remove("image-pending");
+    img.hidden = true;
+    $("image-error").hidden = false;
+  }
 }
 
 function setDetailed(value) {
@@ -205,6 +229,8 @@ $("entry-form").addEventListener("submit", (event) => {
   openGuide();
 });
 $("reload-button").addEventListener("click", openGuide);
+$("retry-downloads").addEventListener("click", () => imageCache.all(slides.map((slide) => slide.image)));
+$("retry-image").addEventListener("click", () => loadImage(slides[current]));
 $("overview-button").addEventListener("click", openOverview);
 $("close-overview").addEventListener("click", () => $("overview").close());
 $("lesson-search").addEventListener("input", (event) => buildOverview(event.target.value));
